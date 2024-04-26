@@ -1,20 +1,20 @@
 # git 정리
-git config --global [user.name](http://user.name) “” : 현재 사용자의 모든 저장소 범위에서 user.name을 “”으로 설정. 이 명령어를 통해 커밋 이용자를 알 수 있음.
-git config --global [user.email](http://user.email) “” : 위와 마찬가지
++ git config --global [user.name](http://user.name) “” : 현재 사용자의 모든 저장소 범위에서 user.name을 “”으로 설정. 이 명령어를 통해 커밋 이용자를 알 수 있음.
++ git config --global [user.email](http://user.email) “” : 위와 마찬가지
 cf) local, system도 있음
-git init : 현재 폴더를 git이 관리하는 작업 디렉토리로 설정
-git remote add origin “” : origin이라는 이름으로 “” 주소를 원격 저장소로 지정하고 연결
-git remote -v : 현재 로컬 저장소에 있는 원격 저장소를 나열해서 보여주는 명령어
-git remote remove origin: origin이라는 원격저장소와의 연결을 해제하는 명령어
-rd /s /q .git : .git 디렉터리 삭제. git init 취소하는 명령어
-git branch : 브랜치 확인하는 명령어. 브랜치를 따로 생성 안 했을 때는 커밋까지 해야 브랜치명이 보임. 기본: master
-git branch “” : 브랜치 생성하는 명령어
-git checkout “” : 작업 브랜치를 해당 브랜치로 변경하는 명령어
-git add : git 인덱스에 추가. 인덱스는 로컬 저장소에 커밋할 준비를 하기 위해 변경 내용을 임시로 저장하는 위치
-git commit: 인덱스에 추가된 파일을 커밋. 로컬 저장소에 기록하는 방법
-git log: 커밋 정보를 알려주는 명령어
-git push origin master: origin이라는 원격저장소의 master라는 브랜치에 푸시하는 명령어
-git pull: 원격 저장소의 내용을 로컬 브랜치로 가져오는 명령어
++ git init : 현재 폴더를 git이 관리하는 작업 디렉토리로 설정
++ git remote add origin “” : origin이라는 이름으로 “” 주소를 원격 저장소로 지정하고 연결
++ git remote -v : 현재 로컬 저장소에 있는 원격 저장소를 나열해서 보여주는 명령어
++ git remote remove origin: origin이라는 원격저장소와의 연결을 해제하는 명령어
++ rd /s /q .git : .git 디렉터리 삭제. git init 취소하는 명령어
++ git branch : 브랜치 확인하는 명령어. 브랜치를 따로 생성 안 했을 때는 커밋까지 해야 브랜치명이 보임. 기본: master
++ git branch “” : 브랜치 생성하는 명령어
++ git checkout “” : 작업 브랜치를 해당 브랜치로 변경하는 명령어
++ git add : git 인덱스에 추가. 인덱스는 로컬 저장소에 커밋할 준비를 하기 위해 변경 내용을 임시로 저장하는 위치
++ git commit: 인덱스에 추가된 파일을 커밋. 로컬 저장소에 기록하는 방법
++ git log: 커밋 정보를 알려주는 명령어
++ git push origin master: origin이라는 원격저장소의 master라는 브랜치에 푸시하는 명령어
++ git pull: 원격 저장소의 내용을 로컬 브랜치로 가져오는 명령어
 
 
 # 코드 설명
