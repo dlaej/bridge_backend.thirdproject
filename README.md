@@ -1,4 +1,5 @@
 # git 정리
+
 + git config --global [user.name](http://user.name) “” : 현재 사용자의 모든 저장소 범위에서 user.name을 “”으로 설정. 이 명령어를 통해 커밋 이용자를 알 수 있음.
 + git config --global [user.email](http://user.email) “” : 위와 마찬가지
 cf) local, system도 있음
