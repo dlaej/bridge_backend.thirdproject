@@ -45,7 +45,7 @@ public class AdminController {
 	Swagger란 Rest Api를 편리하게 문서화해주는 프레임워크입니다. 
 	Swagger가 제공하는 어노테이션 중 각각의 API에 대한 설명을 달아 놓기 위해 ApiOperation 어노테이션을 사용하였습니다. 
  
-	2. @GetMapping 
+	2. @GetMapping("/api/openReportList")
 	@RequestMapping은 http 메서드 요청을 처리할 수 있는 어노테이션입니다.
 	메서드 종류로 get, post, put, delete 등이 있습니다.
 	그 중 get 요청은 클라이언트에서 서버로 정보를 요청하기 위해 사용되는 http 메소드입니다.
@@ -57,9 +57,16 @@ public class AdminController {
 	Body, Header, Status를 포함할 수 있습니다.
 	해당 코드에서는 Body에 신고 목록 데이터와 상태 코드를 반환했습니다. 
 
-	4. bridgeService
-	비즈니스 로직을 구현하는 인터페이스입니다. 
-	부가 로직과 별도로 분리함으로써 
+	4. bridgeService.openReportList()
+	bridgeService는 비즈니스 로직을 구현하는 인터페이스로, 데이터 처리와 관련된 실직적인 로직을 구현합니다. 
+	특정 기능을 수행하기 위해 데이터베이스와의 여러 작업이 필요한 경우가 많습니다. 
+	이러한 트랜잭션 단위의 처리를 컨트롤러와 분리하여 코드의 모듈화, 재사용성, 유지보수성을 개선하고 
+	비즈니스 로직의 독립성을 확보했습니다.
+
+	bridgeService의 메서드 중 openReportList는 Mapper 인터페이스의 openReportList 메서드를 호출합니다.
+	Mapper 인터페이스는 Mybatis에 의해 구현 클래스가 동적으로 생성되며 
+	openReportList는 DB 내 report 테이블의 튜플을 검색하는 SQL 쿼리를 실행시키는 메서드입니다. 
+	메서드 이름은 일관된 가독성을 위해 통일시켰습니다.
 
 	*/
 
